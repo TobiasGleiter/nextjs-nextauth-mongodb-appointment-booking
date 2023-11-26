@@ -2,10 +2,33 @@
 
 import { useSession } from 'next-auth/react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import BaseIcon from '../icons/BaseIcon';
+import ButtonListbox from '../listbox/ButtonListbox';
 
 export default function Header() {
   const { data: session } = useSession();
+
+  const router = useRouter();
+
+  const items = [
+    {
+      action: () => {
+        router.push('/profile');
+      },
+      label: 'Profile',
+      icon: 'profile',
+      active: 'bg-rose-400',
+    },
+    {
+      action: () => {
+        router.push('/auth/signout');
+      },
+      label: 'Sign Out',
+      icon: 'signout',
+      active: 'bg-rose-400',
+    },
+  ];
 
   return (
     <header className="z-50 relative m-0 p-0">
@@ -39,12 +62,7 @@ export default function Header() {
               <p className="font-bold">Book appointment</p>
             </Link>
             {session && (
-              <Link
-                href="/profile"
-                className="flex flex-row gap-1 h-[32px] items-center bg-white text-rose-400 px-4 py-1 rounded-full hover:bg-black duration-150 "
-              >
-                <BaseIcon icon="profile" style="text-rose-400" />
-              </Link>
+              <ButtonListbox title="Account" align="right-0" items={items} />
             )}
           </div>
         </div>

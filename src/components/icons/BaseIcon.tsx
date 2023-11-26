@@ -1,10 +1,12 @@
-import { BsCalendar3, BsFillBookFill } from 'react-icons/bs';
 import {
-  ImArrowDown2,
-  ImArrowUpRight2,
-  ImSpinner9,
-  ImUser,
-} from 'react-icons/im';
+  BiCheckbox,
+  BiDotsHorizontalRounded,
+  BiLogIn,
+  BiLogOut,
+  BiUser,
+} from 'react-icons/bi';
+import { BsCalendar3, BsFillBookFill } from 'react-icons/bs';
+import { ImArrowDown2, ImArrowUpRight2, ImSpinner9 } from 'react-icons/im';
 import { SiGithub, SiNextdotjs } from 'react-icons/si';
 
 const ICONS_MAP: any = {
@@ -16,7 +18,12 @@ const ICONS_MAP: any = {
 
   logo: <BsFillBookFill />,
   calendar: <BsCalendar3 />,
-  profile: <ImUser />,
+  profile: <BiUser />,
+
+  placeholder: <BiCheckbox />,
+  dotmenu: <BiDotsHorizontalRounded />,
+  signin: <BiLogIn />,
+  signout: <BiLogOut />,
 };
 
 export interface IBaseIcon {
