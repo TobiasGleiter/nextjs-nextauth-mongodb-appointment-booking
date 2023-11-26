@@ -1,4 +1,4 @@
-export default function BarberSelector({ onBarberSelect, selectedPerson }) {
+export default function PersonSelector({ onBarberSelect, selectedPerson }) {
   const persons = [{ name: 'Tobi', id: '123' }];
 
   return (

@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import BarberSelector from './BarberSelector';
 import DateSelector from './DateSelector';
+import PersonSelector from './PersonSelector';
 import TimeSelector from './TimeSelector';
 
 export default function BookingComponent() {
@@ -37,7 +37,7 @@ export default function BookingComponent() {
         appointment={appointment}
         selectedTime={appointment.dateTime}
       />
-      <BarberSelector
+      <PersonSelector
         onBarberSelect={handleBarberSelect}
         selectedPerson={appointment.person}
       />
