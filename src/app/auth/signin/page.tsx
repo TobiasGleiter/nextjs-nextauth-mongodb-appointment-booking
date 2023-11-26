@@ -5,12 +5,12 @@ import { Suspense } from 'react';
 // The providers can also be fetched from nextauth
 const providers = [{ label: 'GitHub', provider: 'github', icon: 'github' }];
 
-export default function SignInPage() {
+export default async function SignInPage() {
   return (
-    <div className="relative w-full max-w-xs rounded-xl bg-white/70 p-2">
-      <div className="flex flex-col items-center text-black">
-        <h1 className="w-full font-bold text-2xl mb-4 text-center ">
-          Login /w
+    <div className="relative w-full max-w-xs rounded-xl bg-white/10 p-2">
+      <div className="flex flex-col items-center ">
+        <h1 className="w-full text-3xl font-bold bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent mb-4 text-center ">
+          Sign In
         </h1>
         <div className="mb-2">
           {/** React Suspense along with a fallback aids in promptly displaying the Login page. */}
@@ -27,12 +27,6 @@ export default function SignInPage() {
               );
             })}
           </Suspense>
-        </div>
-        <div className="text-center text-sm mx-4">
-          <p>
-            You have the option to log in or sign in. Your data will neither be
-            stored nor processed.
-          </p>
         </div>
       </div>
     </div>

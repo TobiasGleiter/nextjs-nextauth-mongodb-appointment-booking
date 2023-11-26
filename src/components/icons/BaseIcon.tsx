@@ -1,4 +1,10 @@
-import { ImArrowDown2, ImArrowUpRight2, ImSpinner9 } from 'react-icons/im';
+import { BsCalendar3, BsFillBookFill } from 'react-icons/bs';
+import {
+  ImArrowDown2,
+  ImArrowUpRight2,
+  ImSpinner9,
+  ImUser,
+} from 'react-icons/im';
 import { SiGithub, SiNextdotjs } from 'react-icons/si';
 
 const ICONS_MAP: any = {
@@ -7,6 +13,10 @@ const ICONS_MAP: any = {
   spinner: <ImSpinner9 />,
   arrowdown: <ImArrowDown2 />,
   arrowrightup: <ImArrowUpRight2 />,
+
+  logo: <BsFillBookFill />,
+  calendar: <BsCalendar3 />,
+  profile: <ImUser />,
 };
 
 export interface IBaseIcon {
