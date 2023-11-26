@@ -13,7 +13,6 @@ export const authOptions: NextAuthOptions = {
   providers: [
     GithubProvider({
       profile(profile) {
-        console.log('Some Stripe');
         return {
           role: 'guest',
           id: profile.id.toString(),

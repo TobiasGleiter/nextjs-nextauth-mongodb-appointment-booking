@@ -1,7 +1,7 @@
 'use client';
 import { signOut } from 'next-auth/react';
 
-export interface ISignOutButton {
+export interface IDeleteUserButton {
   /**
    * Is this the principal call to action on the page?
    */
@@ -25,14 +25,17 @@ export interface ISignOutButton {
   onClick?: () => void;
 }
 
-const handleSignOut = async () => {
+const handleDeleteUser = async () => {
+  console.log('Stuff to delete the user');
+  console.log('Call the API to delete the user');
+
   await signOut({
     redirect: true,
     callbackUrl: '/',
   });
 };
 
-const SignOutButton: React.FC<ISignOutButton> = ({
+const DeleteUserButton: React.FC<IDeleteUserButton> = ({
   primary = false,
   size,
   style,
@@ -41,10 +44,10 @@ const SignOutButton: React.FC<ISignOutButton> = ({
 }) => {
   return (
     <button
-      className={`inline-flex rounded-full pl-6 pr-7 py-1 shadow-lg lg:hover:bg-rose-400 lg:hover:text-black duration-300 ${
+      className={`inline-flex rounded-full pl-6 pr-7 py-1 shadow-lg border border-red-600 lg:hover:bg-red-500 lg:hover:text-black duration-300 ${
         primary ? 'bg-white text-black ' : 'bg-black text-white'
       } ${style} ${size} justify-center items-center `}
-      onClick={() => handleSignOut()}
+      onClick={() => handleDeleteUser()}
       {...props}
     >
       {label}
@@ -52,4 +55,4 @@ const SignOutButton: React.FC<ISignOutButton> = ({
   );
 };
 
-export default SignOutButton;
+export default DeleteUserButton;
