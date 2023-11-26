@@ -32,8 +32,8 @@ export default function Header() {
 
   return (
     <header className="z-50 relative m-0 p-0">
-      <nav className="fixed top-3 left-1/2 -translate-x-1/2 max-w-xs lg:max-w-4xl w-full py-2 px-2.5 bg-white/10 backdrop-blur-md rounded-full ">
-        <div className="flex w-full justify-between items-center text-white">
+      <nav className="fixed top-3 left-1/2 -translate-x-1/2 max-w-xs lg:max-w-4xl w-full py-2 px-2.5 bg-white/80 backdrop-blur-md rounded-full ">
+        <div className="flex w-full justify-between items-center text-black">
           <div className="flex items-center font-light text-sm gap-4 pl-2">
             <div>
               <BaseIcon
@@ -45,12 +45,12 @@ export default function Header() {
             <h1 className="font-bold text-lg">Appointment Booking System</h1>
           </div>
           <div className="flex flex-row gap-2 items-center font-medium">
-            <Link href="/" className="hover:text-zinc-300 duration-150">
+            <Link href="/" className="hover:text-zinc-700 duration-150">
               Home
             </Link>
             <Link
               href="/opening-hours"
-              className="hover:text-zinc-300 duration-150"
+              className="hover:text-zinc-700 duration-150"
             >
               Opening hours
             </Link>
