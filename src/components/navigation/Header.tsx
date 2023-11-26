@@ -54,6 +54,9 @@ export default function Header() {
             >
               Opening hours
             </Link>
+            {session && (
+              <ButtonListbox title="Account" align="right-0" items={items} />
+            )}
             <Link
               href="/booking"
               className="flex flex-row gap-1 items-center bg-white text-rose-400 px-4 py-1 rounded-full hover:bg-black duration-150 "
@@ -61,9 +64,6 @@ export default function Header() {
               <BaseIcon icon="calendar" style="text-rose-400" />
               <p className="font-bold">Book appointment</p>
             </Link>
-            {session && (
-              <ButtonListbox title="Account" align="right-0" items={items} />
-            )}
           </div>
         </div>
       </nav>

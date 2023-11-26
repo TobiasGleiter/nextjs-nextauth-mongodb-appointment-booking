@@ -13,8 +13,8 @@ export interface IButtonListbox {
 const ButtonListbox: React.FC<IButtonListbox> = ({ title, items, align }) => {
   return (
     <Menu as="div" className="relative inline-block">
-      <Menu.Button className="items-center inline-flex w-full justify-center rounded-full  px-2 py-1 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-        {title && <span className="ml-1 sm:block xs:hidden">{title}</span>}
+      <Menu.Button className="items-center inline-flex w-full justify-center rounded-full font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+        {title && <span className="">{title}</span>}
       </Menu.Button>
       <Transition
         as={Fragment}
