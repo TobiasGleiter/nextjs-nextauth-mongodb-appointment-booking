@@ -12,7 +12,7 @@ export default function BookingComponent() {
     person: null,
   });
 
-  const handleDateSelect = (date) => {
+  const handleDateSelect = async (date) => {
     setAppointment({ ...appointment, justDate: date });
   };
 
@@ -32,11 +32,9 @@ export default function BookingComponent() {
   return (
     <div className="flex flex-col gap-4 w-full mb-20">
       <DateSelector onDateSelect={handleDateSelect} />
-      <TimeSelector
-        onTimeSelect={handleTimeSelect}
-        appointment={appointment}
-        selectedTime={appointment.dateTime}
-      />
+
+      <TimeSelector onTimeSelect={handleTimeSelect} appointment={appointment} />
+
       <PersonSelector
         onBarberSelect={handleBarberSelect}
         selectedPerson={appointment.person}
