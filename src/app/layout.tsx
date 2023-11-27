@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} max-w-xs lg:max-w-4xl flex flex-col mx-auto min-h-screen h-full w-full bg-gradient-to-t from-zinc-900 to-neutral-900 mt-24`}
+        className={`${inter.className} px-2 lg:max-w-4xl flex flex-col mx-auto min-h-screen h-full w-full bg-gradient-to-t from-zinc-900 to-neutral-900 mt-24`}
       >
         <AuthProvider>
           <Header />

@@ -29,7 +29,7 @@ export default function TimeSelector({
     <div className="flex flex-col gap-2 ">
       <h1 className="text-xl">Select a time:</h1>
       <div className="bg-white rounded-2xl p-2 text-black">
-        <div className="grid grid-cols-8 gap-2 ">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-2 ">
           {times.map((time, index) => {
             const formattedTime = format(time, 'kk:mm');
             return (

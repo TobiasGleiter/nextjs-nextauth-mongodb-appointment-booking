@@ -132,3 +132,18 @@
 .react-calendar--selectRange .react-calendar__tile--hover {
   background-color: rgb(238 242 255);
 }
+
+/* For mobile */
+@media (max-width: 600px) {
+  .react-calendar__month-view__days {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .react-calendar__tile {
+    width: 14%; /* Jede Tile nimmt etwa 14% der Breite ein, was 7 Tiles pro Reihe ergibt */
+    height: 50px; /* Feste Höhe für eine bessere Konsistenz */
+    font-size: 0.9em; /* Angepasste Schriftgröße für Mobilgeräte */
+  }
+}
