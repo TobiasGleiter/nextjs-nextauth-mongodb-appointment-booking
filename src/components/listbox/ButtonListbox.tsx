@@ -26,7 +26,7 @@ const ButtonListbox: React.FC<IButtonListbox> = ({ title, items, align }) => {
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items
-          className={`absolute ${align} mt-2 w-36 origin-top-right divide-y divide-white/10 z-20 bg-white/10 backdrop-blur-md rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
+          className={`absolute ${align} mt-2 w-36 origin-top-right divide-y divide-white/80 z-20 bg-white/80 backdrop-blur-md rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
         >
           {items.map((item) => (
             <Menu.Item as="div" key={item.label} className="p-1">
